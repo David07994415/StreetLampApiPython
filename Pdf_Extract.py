@@ -8,11 +8,9 @@ import io
 import PIL.Image
 
 
-# # 下載 PDF 文件的 URL
-# pdf_url = "https://precaution.kcg.gov.tw/files/%E9%BC%93%E5%B1%B1%E5%8D%80/%E9%BC%93%E5%B1%B1%E5%8D%80%E9%BA%97%E8%88%88%E9%87%8C.pdf"
 
 # # 設定資料夾路徑
-# folder_path = "pdf_files"
+# folder_path = r"C:\Users\user\Desktop\StreetLamp"
 
 # # 確保資料夾存在，如果不存在則創建
 # if not os.path.exists(folder_path):
@@ -20,6 +18,10 @@ import PIL.Image
 
 # # 設定文件的完整路徑
 # file_path = os.path.join(folder_path, "sample.pdf")
+
+
+# # 下載 PDF 文件的 URL
+# pdf_url = "https://precaution.kcg.gov.tw/files/%E5%B7%A6%E7%87%9F%E5%8D%80/%E5%B7%A6%E7%87%9F%E5%8D%80%E6%98%8E%E5%BB%BA%E9%87%8C.pdf"
 
 # # 下載 PDF 文件
 # response = requests.get(pdf_url)
@@ -37,9 +39,9 @@ def TransMetertoPoint(mm_width):
     return point_Output
 
 
-
 # 打開 PDF
-doc = fitz.open("鹽埕區中山里.pdf") # File Path 
+doc = fitz.open("三民區寶國里.pdf") # File Path 
+# doc = fitz.open("sample.pdf") # File Path 
 
 
 # 選擇一個頁面
